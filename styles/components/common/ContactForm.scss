@@ -1,0 +1,77 @@
+.contact__form {
+    padding: 9rem 0 0 0;
+
+    label,
+    input {
+        display: block;
+
+    }
+
+    input[type="text"],
+    input[type="email"]:-webkit-autofill,
+    input[type="text"],
+    input[type="email"]:-webkit-autofill:hover,
+    input[type="text"],
+    input[type="email"]:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        border: none;
+        -webkit-text-fill-color: $color-purple;
+        -webkit-box-shadow: 0 0 0px 1000px $color-white inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        border-bottom: 1px solid $color-light-purple;
+        width: 100%;
+        color: $color-purple;
+    }
+
+
+
+    label {
+        margin-top: 3rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    ::placeholder {
+        font-size: 1.6rem;
+        padding: 2rem 2rem 2rem 0;
+    }
+
+    ::placeholder {
+        padding: 2rem 2rem 2rem 0;
+        color: $color-purple;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 20rem;
+        border-bottom: 1px solid $color-light-purple;
+        margin-bottom: 7rem;
+        color: $color-purple;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: 3rem;
+        }
+
+        &::placeholder {
+            padding: 0;
+        }
+    }
+
+}
