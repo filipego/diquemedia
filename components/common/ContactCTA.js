@@ -10,7 +10,7 @@ function ContactCTA() {
 
         <Container classes={router.pathname === "/contact" ? "remove-cta" : ""}>
 
-            <div>
+            <div className="contactCTA">
                 <h2>let us take you further than you've ever been.</h2>
                 <Link href="/contact">
                     <a className="contact-cta-btn">Contact Us</a>
