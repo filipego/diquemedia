@@ -13,8 +13,8 @@ function Header() {
                         <Image
                             src="/Dique_Media_Website_Images/DIQUE-MEDIA-logo.png?updatedAt=1689120199856"
                             alt="Dique Media Logo"
-                            width={100}
-                            height={100}
+                            width={90}
+                            height={90}
                         />
                     </a>
                 </Link>
