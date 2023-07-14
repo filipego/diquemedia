@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useEffect } from "react";
 import Link from "next/link"
+import Image from 'next/image'
 import Container from "../components/common/Container"
 import Hero from '../components/common/Hero';
 
@@ -37,6 +38,12 @@ function HomePage({ }) {
         <ul className="linksToPages">
           <li className="podcasts-link">
             <Link href="/podcasts"><a>
+              <Image
+                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
+                alt="Podcasts page link"
+                width={411}
+                height={296}
+              />
               <div className="text">
                 <h3>Podcasts</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -45,6 +52,12 @@ function HomePage({ }) {
           </li>
           <li className="labodega-link">
             <Link href="/labodega"><a>
+              <Image
+                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
+                alt="Podcasts page link"
+                width={411}
+                height={296}
+              />
               <div className="text">
                 <h3>La Bodega</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -53,6 +66,12 @@ function HomePage({ }) {
           </li>
           <li className="lujo-link">
             <a href="#" target="_blank" rel="noreferrer">
+              <Image
+                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
+                alt="Podcasts page link"
+                width={411}
+                height={296}
+              />
               <div className="text">
                 <h3>Lujo Tooth Polish</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>

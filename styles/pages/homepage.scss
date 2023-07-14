@@ -1,12 +1,20 @@
 .homepage {
     .linksToPages {
+        width: 100%;
         display: grid;
-        grid-template-columns: 1.5fr 1.8fr 1fr;
+        grid-template-columns: 1.3fr 1.8fr 1.1fr;
         gap: 4rem;
 
         @media only screen and (max-width: $bp-small) {
             grid-template-columns: 1fr;
             gap: 0;
+        }
+
+        img {
+            width: 100vw !important;
+            height: 20rem !important;
+            max-height: 20rem !important;
+            object-fit: cover;
         }
 
         .text {
