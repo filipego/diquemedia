@@ -1,8 +1,7 @@
+import YoutubeVideo from "./YoutubeVideo"
 
 
-
-
-function Hero({ title, paragraph, media, inverse }) {
+function Hero({ title, paragraph, youtubeUrl, youtubeTitle, inverse }) {
 
 
     return (
@@ -15,7 +14,7 @@ function Hero({ title, paragraph, media, inverse }) {
             </div>
 
             <div className="hero__media">
-                {media}
+                <YoutubeVideo video={youtubeUrl} title={youtubeTitle} />
             </div>
 
 
