@@ -76,14 +76,6 @@ img {
     gap: 0;
   }
 
-  &--bigger-gap {
-    gap: 16rem;
-
-    @media only screen and (max-width: $bp-small) {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-  }
 }
 
 .grid-col-3 {
@@ -169,156 +161,7 @@ a:hover {}
 
 }
 
-// Padding Hero
 
-.pt-hero {
-  padding-top: 20rem;
-  padding-bottom: 5rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-top: 10rem;
-    padding-bottom: 2.5rem;
-  }
-}
-
-
-// Padding 0
-
-.p-lr-0 {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.p-tb-0 {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.pt-0 {
-  padding-top: 0;
-}
-
-.pb-0 {
-  padding-bottom: 0;
-}
-
-// Padding 2rem
-
-.p-tb-2 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.pt-2 {
-  padding-top: 2rem;
-}
-
-.pb-2 {
-  padding-bottom: 2rem;
-}
-
-// Padding top and bottom
-
-.p-tb-5 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-  }
-}
-
-.p-tb-10 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-
-  }
-}
-
-.p-tb-20 {
-  padding-top: 20rem;
-  padding-bottom: 20rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-
-  }
-}
-
-// Padding top
-
-.pt-5 {
-  padding-top: 5rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-top: 2rem;
-
-  }
-}
-
-.pt-10 {
-  padding-top: 10rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-top: 5rem;
-
-  }
-}
-
-.pt-20 {
-  padding-top: 20rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-top: 10rem;
-
-  }
-}
-
-
-// Padding bottom
-
-.pb-5 {
-  padding-bottom: 5rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-bottom: 2rem;
-
-  }
-}
-
-.pb-10 {
-  padding-bottom: 10rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-bottom: 5rem;
-
-  }
-}
-
-.pb-12 {
-  padding-bottom: 12rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-bottom: 5rem;
-
-  }
-}
-
-.pb-20 {
-  padding-bottom: 20rem;
-
-  @media only screen and (max-width: $bp-small) {
-    padding-bottom: 10rem;
-
-  }
-}
 
 
 // Youtube Video
@@ -357,44 +200,8 @@ iframe {
 }
 
 
-.cards {
-  padding: 0;
-}
 
 
-.homepage {
-  .heighty-five-height div:first-child .wrapper:first-child {
-    align-self: flex-end;
-
-    img {}
-  }
-}
-
-ol {
-  list-style-type: decimal;
-  list-style-position: inside;
-
-  li {
-    ol {
-      list-style-position: inside;
-      list-style-type: lower-roman;
-
-      li {
-        margin-top: 1rem;
-        margin-left: 2rem;
-        list-style-type: lower-latin;
-        margin-bottom: 2rem;
-      }
-    }
-
-    list-style-type: decimal;
-    margin-bottom: 3rem;
-
-    strong {
-      font-weight: bold;
-    }
-  }
-}
 
 // remove CTA
 .remove-cta {
@@ -405,6 +212,7 @@ ol {
 
 @import "./components/common/nav.scss";
 @import "./components/common/header.scss";
+@import "./components/common/hero.scss";
 @import "./components/common/contactcta.scss";
 @import "./components/common/footer.scss";
 

@@ -1,0 +1,29 @@
+.hero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+    margin-bottom: 10rem;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    &__text {
+        h2 {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__inverse {
+        margin-bottom: 0;
+
+        & div:last-child {
+            grid-row: 1 / 3;
+
+        }
+    }
+}

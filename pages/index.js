@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useEffect } from "react";
 import Link from "next/link"
 import Container from "../components/common/Container"
+import Hero from '../components/common/Hero';
 
 
 function HomePage({ }) {
@@ -25,7 +26,14 @@ function HomePage({ }) {
       </Head>
 
       <Container>
-        Home Page
+        <Hero
+          title={<>Dique<span>Media</span></>}
+          paragraph={<>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </>}
+          media="video"
+        />
+        More home page content
       </Container>
 
     </>

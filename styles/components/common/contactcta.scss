@@ -1,7 +1,14 @@
+.cta {
+    padding-top: 0;
+}
+
 .contactCTA {
     position: relative;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 60%;
 
-    h2 {}
+    h2 {
+        font-size: 8rem;
+    }
+
 }
