@@ -14,7 +14,7 @@ function Hero({ title, paragraph, youtubeUrl, youtubeTitle, inverse }) {
             </div>
 
             <div className="hero__media">
-                <YoutubeVideo video={youtubeUrl} title={youtubeTitle} />
+                {youtubeUrl && <YoutubeVideo video={youtubeUrl} title={youtubeTitle} />}
             </div>
 
 

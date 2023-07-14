@@ -34,7 +34,32 @@ function HomePage({ }) {
           youtubeUrl="XqZsoesa55w"
           youtubeTitle="Baby Shark"
         />
-        More home page content
+        <ul className="linksToPages">
+          <li className="podcasts-link">
+            <Link href="/podcasts"><a>
+              <div className="text">
+                <h3>Podcasts</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+            </a></Link>
+          </li>
+          <li className="labodega-link">
+            <Link href="/labodega"><a>
+              <div className="text">
+                <h3>La Bodega</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+            </a></Link>
+          </li>
+          <li className="lujo-link">
+            <a href="#" target="_blank" rel="noreferrer">
+              <div className="text">
+                <h3>Lujo Tooth Polish</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+            </a>
+          </li>
+        </ul>
       </Container>
 
     </>

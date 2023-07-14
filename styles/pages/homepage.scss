@@ -1,0 +1,11 @@
+.homepage {
+    .linksToPages {
+        display: grid;
+        grid-template-columns: 1.5fr 1.8fr 1fr;
+        gap: 4rem;
+
+        .text {
+            padding: 0 2rem;
+        }
+    }
+}
