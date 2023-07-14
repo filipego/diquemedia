@@ -35,50 +35,7 @@ function HomePage({ }) {
           youtubeUrl="XqZsoesa55w"
           youtubeTitle="Baby Shark"
         />
-        <ul className="linksToPages">
-          <li className="podcasts-link">
-            <Link href="/podcasts"><a>
-              <Image
-                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                alt="Podcasts page link"
-                width={411}
-                height={296}
-              />
-              <div className="text">
-                <h3>Podcasts</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </a></Link>
-          </li>
-          <li className="labodega-link">
-            <Link href="/labodega"><a>
-              <Image
-                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                alt="Podcasts page link"
-                width={411}
-                height={296}
-              />
-              <div className="text">
-                <h3>La Bodega</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </a></Link>
-          </li>
-          <li className="lujo-link">
-            <a href="#" target="_blank" rel="noreferrer">
-              <Image
-                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                alt="Podcasts page link"
-                width={411}
-                height={296}
-              />
-              <div className="text">
-                <h3>Lujo Tooth Polish</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </a>
-          </li>
-        </ul>
+
       </Container>
 
     </>
