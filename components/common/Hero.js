@@ -1,12 +1,12 @@
 import YoutubeVideo from "./YoutubeVideo"
 
 
-function Hero({ title, paragraph, youtubeUrl, youtubeTitle, inverse }) {
+function Hero({ title, paragraph, youtubeUrl, youtubeTitle, inverse, bottomPadding }) {
 
 
     return (
 
-        <div className={`hero ${inverse ? 'hero__inverse' : ''}`}>
+        <div className={`hero ${inverse ? 'hero__inverse' : ''} ${bottomPadding ? 'bottom-padding' : ''}`}>
 
             <div className="hero__text">
                 <h2>{title}</h2>

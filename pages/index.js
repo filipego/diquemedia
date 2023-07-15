@@ -35,6 +35,8 @@ function HomePage({ }) {
           youtubeUrl="XqZsoesa55w"
           youtubeTitle="Baby Shark"
         />
+      </Container>
+      <Container classes="noTopPadding">
         <ul className="linksToPages">
           <li className="podcasts-link">
             <Link href="/podcasts"><a>

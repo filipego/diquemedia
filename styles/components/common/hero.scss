@@ -3,13 +3,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10rem;
-    margin-bottom: 14rem;
     align-items: center;
 
 
     @media only screen and (max-width: $bp-small) {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+
+    &.bottom-padding {
+        margin-bottom: 12rem;
     }
 
     &__text {
@@ -22,10 +25,13 @@
 
     &__inverse {
         margin-bottom: 0;
+        row-gap: 0;
 
         & div:last-child {
             grid-row: 1 / 3;
 
         }
     }
+
+
 }
