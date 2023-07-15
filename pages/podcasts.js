@@ -1,11 +1,15 @@
 import Head from 'next/head'
+import { client } from "../lib/sanity"
 import { useEffect } from "react";
 import Link from "next/link"
 import Container from "../components/common/Container"
 import Hero from '../components/common/Hero';
+import RichText from '../components/common/RichText';
 
 
-function Podcasts({ }) {
+function Podcasts({ title, text }) {
+
+
 
 
     useEffect(() => {
@@ -34,14 +38,57 @@ function Podcasts({ }) {
                     youtubeUrl="GOqEl4ADyVk"
                     youtubeTitle="Tom Holland Interview"
                 />
-                More Podcasts page content
+
             </Container>
+
+
+            <Container>
+                <h2 className='special'>Latest <span>Podcast</span></h2>
+            </Container>
+
+
+            <Container>
+                <Hero
+                    title={title}
+                    paragraph={<RichText textContent={text} />}
+                />
+
+            </Container>
+
+
 
         </>
     )
 }
 
 
+
+export const getServerSideProps = async () => {
+
+
+    const query = `*[ _type == "latestpodcast"][0]{
+          title,
+          text
+      }`
+
+    const latestPod = await client.fetch(query)
+
+    if (!latestPod) {
+        return {
+            props: null,
+            notFound: true,
+
+            latestPod: [],
+        }
+    } else {
+        return {
+            props: {
+                title: latestPod.title,
+                text: latestPod.text
+            }
+        }
+    }
+};
 
 
 
