@@ -1,7 +1,10 @@
+
+import ImageComponent from "./ImageComponent"
 import YoutubeVideo from "./YoutubeVideo"
 
 
-function Hero({ title, paragraph, youtubeUrl, youtubeTitle, inverse, bottomPadding }) {
+
+function Hero({ title, paragraph, youtubeUrl, youtubeTitle, latestPodImage, inverse, bottomPadding }) {
 
 
     return (
@@ -15,12 +18,10 @@ function Hero({ title, paragraph, youtubeUrl, youtubeTitle, inverse, bottomPaddi
 
             <div className="hero__media">
                 {youtubeUrl && <YoutubeVideo video={youtubeUrl} title={youtubeTitle} />}
+                {latestPodImage && <ImageComponent img={latestPodImage} />}
             </div>
 
-
         </div>
-
-
 
     )
 }

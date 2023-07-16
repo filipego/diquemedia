@@ -7,13 +7,14 @@ import Hero from '../components/common/Hero';
 import RichText from '../components/common/RichText';
 
 
-function Podcasts({ title, text }) {
+function Podcasts({ title, text, thumbImage }) {
 
 
 
 
     useEffect(() => {
         document.body.className = "podcasts"
+        console.log(thumbImage)
     });
 
     return (
@@ -51,6 +52,7 @@ function Podcasts({ title, text }) {
                 <Hero
                     title={title}
                     paragraph={<RichText textContent={text} />}
+                    latestPodImage={thumbImage}
                 />
 
             </Container>
@@ -68,7 +70,8 @@ export const getServerSideProps = async () => {
 
     const query = `*[ _type == "latestpodcast"][0]{
           title,
-          text
+          text,
+          thumbImage
       }`
 
     const latestPod = await client.fetch(query)
@@ -84,7 +87,8 @@ export const getServerSideProps = async () => {
         return {
             props: {
                 title: latestPod.title,
-                text: latestPod.text
+                text: latestPod.text,
+                thumbImage: latestPod.thumbImage
             }
         }
     }
