@@ -32,6 +32,24 @@ h2 {
         color: $color-dark;
     }
 
+    &.special {
+        font-size: 22rem;
+        color: #E7DFDF;
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        display: block;
+        line-height: .8;
+
+
+        .break {
+            display: block;
+            text-align: right;
+            margin-bottom: 1.5rem;
+
+        }
+    }
+
 }
 
 h3 {

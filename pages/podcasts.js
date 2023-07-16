@@ -43,8 +43,10 @@ function Podcasts({ title, text, thumbImage }) {
             </Container>
 
 
-            <Container>
-                <h2 className='special'>Latest <span>Podcast</span></h2>
+            <Container classes="latest-podcast">
+                <div>
+                    <h2 className='special'>Latest <span className='break'>Podcast</span></h2>
+                </div>
             </Container>
 
 
@@ -54,6 +56,10 @@ function Podcasts({ title, text, thumbImage }) {
                     paragraph={<RichText textContent={text} />}
                     latestPodImage={thumbImage}
                 />
+
+            </Container>
+            <Container>
+
 
             </Container>
 
