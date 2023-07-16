@@ -1,0 +1,24 @@
+.labodega {
+    .products {
+        gap: 4rem;
+
+        li {
+            margin-bottom: 2rem;
+        }
+
+        &__item {
+            &__img {
+                margin-bottom: 3rem;
+
+            }
+
+            &__text {
+                padding: 0 3rem;
+
+                p {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

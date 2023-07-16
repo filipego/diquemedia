@@ -50,7 +50,7 @@ iframe {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
-  padding: 12rem 8rem;
+  padding: 12rem 8rem 14rem 8rem;
 
 
   @media only screen and (max-width: $bp-small) {
@@ -221,6 +221,7 @@ iframe {
 // Pages
 @import "./pages/homepage.scss";
 @import "./pages/podcasts.scss";
+@import "./pages/labodega.scss";
 
 
 @import "./components/common/nav.scss";
