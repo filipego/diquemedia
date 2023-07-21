@@ -30,18 +30,20 @@ function HomePage({ }) {
         <Hero
           title={<>Dique<span>Media</span></>}
           paragraph={<>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Dique! Podcast is the audio diary of Sarah Vega Melian. </p>
+            <p>Spoken from the Point of View of a first generation Dominican American woman, Dique! Explores the trials, tribulations and triumphs of the first Gen millennial .</p>
+            <p>With different interviews with notable figures such as Coco and Breezy, Enitan Bereola and Evan Carmichael , Dique! Podcast delves into various topics that affects the east coast Caribbean American audience. </p>
           </>}
           youtubeUrl="XqZsoesa55w"
           youtubeTitle="Baby Shark"
         />
       </Container>
-      <Container classes="noTopPadding">
+      <Container classes="halfTopPadding">
         <ul className="linksToPages">
           <li className="podcasts-link">
             <Link href="/podcasts"><a>
               <Image
-                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
+                src="/Dique_Media_Website_Images/home-podcast.jpg?updatedAt=1689969838805"
                 alt="Podcasts page link"
                 width={411}
                 height={296}
@@ -69,8 +71,8 @@ function HomePage({ }) {
           <li className="lujo-link">
             <a href="#" target="_blank" rel="noreferrer">
               <Image
-                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                alt="Podcasts page link"
+                src="/Dique_Media_Website_Images/home-Lujo-Tooth-Polish.jpg?updatedAt=1689970124815"
+                alt="Lujo Teeth Polish link"
                 width={411}
                 height={296}
               />

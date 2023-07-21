@@ -29,9 +29,10 @@ function About({ }) {
                 <Hero
                     title={<>About<span>Dique Media</span></>}
                     paragraph={<>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Dique! Media is a multi media network specializing in all things east coast afro-caribbean with a focus on Dominican culture. </p>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>We saw the lack of positive Dominican representation in mainstream media and decided to create our own. The mission with Dique! Media Network is to emphasize the positivity in our tri-state culture through a millennial lens. </p>
+                        <p>With the focal point on music trends, politics and current events, Dique! is here to report on trending media that speak to our demographic the right way. </p>
                     </>}
                     media="video"
                     bottomPadding

@@ -38,7 +38,7 @@ function Labodega({ }) {
 
             </Container>
 
-            <Container>
+            <Container classes="halfTopPadding">
                 <ul className="products grid-col-3">
                     <li className="products__item">
                         <div className="products__item__img">
