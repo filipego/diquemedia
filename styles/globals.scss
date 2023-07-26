@@ -121,6 +121,11 @@ iframe {
   align-items: center;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 
 // Button and link
 
@@ -226,6 +231,7 @@ iframe {
 @import "./pages/homepage.scss";
 @import "./pages/podcasts.scss";
 @import "./pages/labodega.scss";
+@import "./pages/contact.scss";
 
 
 @import "./components/common/nav.scss";
