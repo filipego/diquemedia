@@ -31,11 +31,14 @@
         .input-message {
             background: white;
             width: 100%;
-            padding: .7rem 1.5rem;
+            padding: 1rem 1.5rem;
         }
 
         .input-message {
             margin-bottom: 3rem;
+            word-wrap: break-word;
+            min-height: 20rem;
+            resize: vertical;
         }
     }
 }

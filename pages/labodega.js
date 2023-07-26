@@ -48,6 +48,7 @@ function Labodega({ labodega }) {
                             thumbnail={item.thumbImage}
                             title={item.title}
                             paragraph={item.paragraph}
+                            buy1Url={item.buy1Url}
                         />
                     ))}
                 </ul>

@@ -113,8 +113,9 @@ function Contact({ }) {
                         </div>
                         <div>
                             <label for="message">Message</label>
-                            <textarea className='input-message' id="message" name="message" required />
+                            <textarea className='input-message' rows="2" cols="20" wrap="hard" id="message" name="message" required />
                         </div>
+
                         <input className="btn" type="submit" value="Send" />
 
                     </form>
