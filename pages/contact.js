@@ -1,15 +1,33 @@
 import Head from 'next/head'
-import { useEffect } from "react";
+import React, { useRef, useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import Image from 'next/image'
 import Container from "../components/common/Container"
 
 
 function Contact({ }) {
+    const form = useRef();
 
 
     useEffect(() => {
         document.body.className = "contact"
     });
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_h2wft66', 'template_7pquv6n', form.current, '54HvWBDIv_jfYpjoD')
+            .then((result) => {
+                // console.log(result.text);
+
+
+            }, (error) => {
+                // console.log(error.text);
+            });
+
+
+        e.target.reset();
+    };
 
     return (
         <>
@@ -76,7 +94,30 @@ function Contact({ }) {
                     </nav>
                 </div>
                 <div className="contact__form">
+                    <form ref={form} onSubmit={sendEmail}>
+                        <div>
+                            <label for="name">Name</label>
+                            <input className='input' id="name" type="text" name="name" required />
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input className='input' id="email" type="email" name="email" required />
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input className='input' id="phone" type="phone" name="phone" required />
+                        </div>
+                        <div>
+                            <label for="help">What can we help you with?</label>
+                            <input className='input' id="help" type="text" name="name" required />
+                        </div>
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea className='input-message' id="message" name="message" required />
+                        </div>
+                        <input className="btn" type="submit" value="Send" />
 
+                    </form>
                 </div>
             </Container>
 

@@ -1,10 +1,41 @@
 .contact {
+
+    .grid-col-2 {
+        gap: 12rem;
+    }
+
     nav {
         ul {
             li {
                 padding-left: 0;
                 padding-right: 1rem;
             }
+        }
+    }
+
+    &__form {
+        div {
+            margin-top: 3rem;
+
+            &:first-child {
+                margin-top: 1rem;
+            }
+        }
+
+        label {
+            margin-bottom: .9rem;
+            display: block;
+        }
+
+        .input,
+        .input-message {
+            background: white;
+            width: 100%;
+            padding: .7rem 1.5rem;
+        }
+
+        .input-message {
+            margin-bottom: 3rem;
         }
     }
 }

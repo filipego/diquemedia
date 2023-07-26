@@ -3,10 +3,11 @@ import { useEffect } from "react";
 import Link from "next/link"
 import Container from "../components/common/Container"
 import Hero from '../components/common/Hero';
-import Image from 'next/image'
+import { client } from "../lib/sanity"
+import ProductsItem from '../components/common/ProductsItem';
 
 
-function Labodega({ }) {
+function Labodega({ labodega }) {
 
 
     useEffect(() => {
@@ -40,98 +41,17 @@ function Labodega({ }) {
 
             <Container classes="halfTopPadding">
                 <ul className="products grid-col-3">
-                    <li className="products__item">
-                        <div className="products__item__img">
-                            <Image
-                                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                                alt="Podcasts page link"
-                                width={411}
-                                height={296}
-                            />
-                        </div>
-                        <div className="products__item__text">
-                            <h3>Product 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="">View Product &#8827;</a>
-                        </div>
-                    </li>
-                    <li className="products__item">
-                        <div className="products__item__img">
-                            <Image
-                                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                                alt="Podcasts page link"
-                                width={411}
-                                height={296}
-                            />
-                        </div>
-                        <div className="products__item__text">
-                            <h3>Product 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="">View Product &#8827;</a>
-                        </div>
-                    </li>
-                    <li className="products__item">
-                        <div className="products__item__img">
-                            <Image
-                                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                                alt="Podcasts page link"
-                                width={411}
-                                height={296}
-                            />
-                        </div>
-                        <div className="products__item__text">
-                            <h3>Product 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="">View Product &#8827;</a>
-                        </div>
-                    </li>
-                    <li className="products__item">
-                        <div className="products__item__img">
-                            <Image
-                                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                                alt="Podcasts page link"
-                                width={411}
-                                height={296}
-                            />
-                        </div>
-                        <div className="products__item__text">
-                            <h3>Product 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="">View Product &#8827;</a>
-                        </div>
-                    </li>
-                    <li className="products__item">
-                        <div className="products__item__img">
-                            <Image
-                                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                                alt="Podcasts page link"
-                                width={411}
-                                height={296}
-                            />
-                        </div>
-                        <div className="products__item__text">
-                            <h3>Product 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="">View Product &#8827;</a>
-                        </div>
-                    </li>
-                    <li className="products__item">
-                        <div className="products__item__img">
-                            <Image
-                                src="/Dique_Media_Website_Images/test-img.jpg?updatedAt=1689366810824"
-                                alt="Podcasts page link"
-                                width={411}
-                                height={296}
-                            />
-                        </div>
-                        <div className="products__item__text">
-                            <h3>Product 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="">View Product &#8827;</a>
-                        </div>
-                    </li>
-
+                    {labodega.map((item, index) => (
+                        <ProductsItem
+                            key={index}
+                            i={index}
+                            thumbnail={item.thumbImage}
+                            title={item.title}
+                            paragraph={item.paragraph}
+                        />
+                    ))}
                 </ul>
+
             </Container>
 
         </>
@@ -139,7 +59,27 @@ function Labodega({ }) {
 }
 
 
+export const getServerSideProps = async () => {
 
+    const labodegaQuery = '*[ _type == "labodega" ] | order(_createdAt desc)'
+    const labodega = await client.fetch(labodegaQuery)
+
+
+    if (!labodega.length) {
+        return {
+            props: {
+                labodega: []
+            }
+        }
+    } else {
+        return {
+            props: {
+                labodega: labodega
+            }
+        }
+    }
+
+};
 
 
 export default Labodega
