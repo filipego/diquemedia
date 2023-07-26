@@ -34,8 +34,8 @@ function HomePage({ }) {
             <p>Spoken from the Point of View of a first generation Dominican American woman, Dique! Explores the trials, tribulations and triumphs of the first Gen millennial .</p>
             <p>With different interviews with notable figures such as Coco and Breezy, Enitan Bereola and Evan Carmichael , Dique! Podcast delves into various topics that affects the east coast Caribbean American audience. </p>
           </>}
-          youtubeUrl="XqZsoesa55w"
-          youtubeTitle="Baby Shark"
+          youtubeUrl="DhcVWDH59Hs"
+          youtubeTitle="Welcome to Dique Media"
         />
       </Container>
       <Container classes="halfTopPadding">
