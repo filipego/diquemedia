@@ -15,7 +15,7 @@ function ProductItem({ thumbnail, title, paragraph }) {
             <div className="products__item__img">
 
             </div>
-            <div className="products__item__text">
+            <div>
                 {thumbnail && <ImageComponent img={thumbnail} />}
                 <div className="products__item__text">
                     <h3>{title}</h3>
