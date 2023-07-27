@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { client } from "../lib/sanity"
 import { useEffect } from "react";
-import Link from "next/link"
 import Container from "../components/common/Container"
 import Hero from '../components/common/Hero';
 import RichText from '../components/common/RichText';
@@ -57,6 +56,7 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
                 />
 
             </Container>
+
             <Container classes="halfTopPadding">
                 <h2>Latest Podcasts</h2>
                 <ul className="grid-col-3 podcastsItems">
@@ -73,7 +73,7 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
 
             </Container>
 
-            <Container classes="halfTopPadding">
+            <Container classes="noTopPadding">
                 <h2>Video Podcasts</h2>
 
                 <ul className="grid-col-3 podcastsItems">
@@ -88,12 +88,12 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
                             />
                         }
                     }
-
                     )}
                 </ul>
 
             </Container>
-            <Container classes="halfTopPadding">
+
+            <Container classes="noTopPadding">
                 <h2>Audio Podcasts</h2>
 
                 <ul className="grid-col-3 podcastsItems ">
@@ -108,7 +108,6 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
                             />
                         }
                     }
-
                     )}
                 </ul>
             </Container>
@@ -122,7 +121,7 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
 
 export const getServerSideProps = async () => {
 
-    // Latest Podcasts
+    // Latest Podcast
 
     const query = `*[ _type == "latestpodcast"][0]{
           title,
@@ -145,7 +144,7 @@ export const getServerSideProps = async () => {
             props: null,
             notFound: true,
 
-            // Latest Podcasts
+            // Latest Podcast
             latestPod: [],
 
             // All Podcasts
@@ -155,7 +154,7 @@ export const getServerSideProps = async () => {
         return {
             props: {
 
-                // Latest Podcasts
+                // Latest Podcast
                 title: latestPod.title,
                 text: latestPod.text,
                 thumbImage: latestPod.thumbImage,
