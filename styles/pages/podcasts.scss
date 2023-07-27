@@ -3,4 +3,26 @@
         padding-top: 0;
         padding-bottom: 0;
     }
+
+    .podcastsItems {
+        gap: 4rem;
+
+        &__item {
+            margin-bottom: 2.5rem;
+            max-width: 100%;
+
+            img {
+                margin-bottom: 3rem;
+                max-width: fit-content;
+            }
+
+            &__text {
+                padding: 0 2.5rem;
+
+                p {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
 }

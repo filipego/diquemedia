@@ -5,16 +5,15 @@ import Link from "next/link"
 import Container from "../components/common/Container"
 import Hero from '../components/common/Hero';
 import RichText from '../components/common/RichText';
+import PodcastsItem from '../components/common/PodcastsItem';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
 function Podcasts({ title, text, thumbImage, podcasts }) {
 
-
-
-
     useEffect(() => {
         document.body.className = "podcasts"
-        console.log(podcasts)
     });
 
     return (
@@ -58,19 +57,60 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
                 />
 
             </Container>
-            <Container>
+            <Container classes="halfTopPadding">
                 <h2>Latest Podcasts</h2>
-
+                <ul className="grid-col-3 podcastsItems">
+                    {podcasts.map((item, index) => (
+                        <PodcastsItem
+                            key={index}
+                            i={index}
+                            thumbnail={item.thumbImage}
+                            title={item.title}
+                            paragraph={item.paragraph}
+                        />
+                    ))}
+                </ul>
 
             </Container>
 
-            <Container>
+            <Container classes="halfTopPadding">
                 <h2>Video Podcasts</h2>
 
+                <ul className="grid-col-3 podcastsItems">
+                    {podcasts.map((item, index) => {
+                        if (item.mediaType === "video") {
+                            return <PodcastsItem
+                                key={index}
+                                i={index}
+                                thumbnail={item.thumbImage}
+                                title={item.title}
+                                paragraph={item.paragraph}
+                            />
+                        }
+                    }
+
+                    )}
+                </ul>
+
             </Container>
-            <Container>
+            <Container classes="halfTopPadding">
                 <h2>Audio Podcasts</h2>
 
+                <ul className="grid-col-3 podcastsItems ">
+                    {podcasts.map((item, index) => {
+                        if (item.mediaType === "audio") {
+                            return <PodcastsItem
+                                key={index}
+                                i={index}
+                                thumbnail={item.thumbImage}
+                                title={item.title}
+                                paragraph={item.paragraph}
+                            />
+                        }
+                    }
+
+                    )}
+                </ul>
             </Container>
 
 
