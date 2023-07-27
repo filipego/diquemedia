@@ -7,14 +7,14 @@ import Hero from '../components/common/Hero';
 import RichText from '../components/common/RichText';
 
 
-function Podcasts({ title, text, thumbImage }) {
+function Podcasts({ title, text, thumbImage, podcasts }) {
 
 
 
 
     useEffect(() => {
         document.body.className = "podcasts"
-        console.log(thumbImage)
+        console.log(podcasts)
     });
 
     return (
@@ -59,10 +59,19 @@ function Podcasts({ title, text, thumbImage }) {
 
             </Container>
             <Container>
+                <h2>Latest Podcasts</h2>
 
 
             </Container>
 
+            <Container>
+                <h2>Video Podcasts</h2>
+
+            </Container>
+            <Container>
+                <h2>Audio Podcasts</h2>
+
+            </Container>
 
 
         </>
@@ -73,6 +82,7 @@ function Podcasts({ title, text, thumbImage }) {
 
 export const getServerSideProps = async () => {
 
+    // Latest Podcasts
 
     const query = `*[ _type == "latestpodcast"][0]{
           title,
@@ -82,23 +92,43 @@ export const getServerSideProps = async () => {
 
     const latestPod = await client.fetch(query)
 
-    if (!latestPod) {
+
+    // All Podcasts
+
+    const podcastsQuery = '*[ _type == "podcasts" ] | order(_createdAt desc)'
+    const podcasts = await client.fetch(podcastsQuery)
+
+
+
+    if (!latestPod || !podcasts.length) {
         return {
             props: null,
             notFound: true,
 
+            // Latest Podcasts
             latestPod: [],
+
+            // All Podcasts
+            podcasts: []
         }
     } else {
         return {
             props: {
+
+                // Latest Podcasts
                 title: latestPod.title,
                 text: latestPod.text,
-                thumbImage: latestPod.thumbImage
+                thumbImage: latestPod.thumbImage,
+
+
+                // All Podcasts
+                podcasts: podcasts
             }
         }
     }
 };
+
+
 
 
 
