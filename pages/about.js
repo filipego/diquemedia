@@ -42,9 +42,21 @@ function About({ }) {
                     inverse
                     title={<>About<span>Sarah Vega</span></>}
                     paragraph={<>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Now that we got that quick intro out of the way, Let me give you a rundown about me. </p>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Sarah Margarita Vega Melian (the self proclaimed "Voice of the Tri-State") was born October 26, 1984 to a Dominican mother and Nicaraguan father. </p>
+
+                        <p>Born and raised in Newark, NJ, I was always influenced by culture, media and style since the tender age of 12 when my mother brought me my first "Vanidades" magazine. </p>
+
+                        <p>With the original goal of becoming an Editor for a major publication, I have worked for The Source and Complex. </p>
+
+                        <p>After the Great Recession of the early 2000s, I found myself in the Social work field and later, as a corrections officer for Northern State Prison. </p>
+
+                        <p>Not knowing what life was about to bring me, I ended up being a professional couch surfer for a few years. </p>
+
+                        <p>While sleeping on a friend's couch, Dique! The podcast was born. After gaining cult popularity, Dique! Was nominated for the Tecla Award for Best Podcast Content Creator. </p>
+
+                        <p>That accolade was what led me to start up Sarah Vega Enterprises which created the Dique! Media Network which focuses on the cultural architecture of Caribbean life in the Tri-state and Lujo Wellness, a holistic oral care company.  </p>
                     </>}
                     media="video"
                 />
