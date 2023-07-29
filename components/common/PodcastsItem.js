@@ -7,7 +7,7 @@ function PodcastsItem({ thumbnail, title, paragraph, }) {
 
     return (
 
-        <li className="podcastsItems__item">
+        <div className="podcastsItems__item">
             <div className="podcastsItems__item__img">
                 {thumbnail && <ImageComponent img={thumbnail} />}
             </div>
@@ -19,7 +19,7 @@ function PodcastsItem({ thumbnail, title, paragraph, }) {
                     {/* <a href="#" target="_blank" rel="noreferrer">View Product &#8827;</a> */}
                 </div>
             </div>
-        </li>
+        </div>
 
     )
 }

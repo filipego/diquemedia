@@ -9,6 +9,8 @@ import PodcastsItem from '../components/common/PodcastsItem';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+
+
 function Podcasts({ title, text, thumbImage, podcasts }) {
 
     useEffect(() => {
@@ -57,59 +59,122 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
 
             </Container>
 
-            <Container classes="halfTopPadding">
+            <Container classes="halfTopPadding container__noGrid">
                 <h2>Latest Podcasts</h2>
-                <ul className="grid-col-3 podcastsItems">
-                    {podcasts.map((item, index) => (
-                        <PodcastsItem
-                            key={index}
-                            i={index}
-                            thumbnail={item.thumbImage}
-                            title={item.title}
-                            paragraph={item.paragraph}
-                        />
-                    ))}
-                </ul>
+
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={40}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1
+                        },
+                        768: {
+                            slidesPerView: 2
+                        },
+                        1024: {
+                            slidesPerView: 3
+                        },
+                    }}
+                    className="mySwiper"
+                >
+
+
+                    {podcasts.map((item, index) =>
+                        <SwiperSlide key={index} className="flex-direction">
+                            <PodcastsItem
+                                key={index}
+                                i={index}
+                                thumbnail={item.thumbImage}
+                                title={item.title}
+                                paragraph={item.paragraph}
+                            />
+                        </SwiperSlide>
+                    )}
+
+
+
+                </Swiper>
 
             </Container>
 
-            <Container classes="noTopPadding">
+            <Container classes="noTopPadding container__noGrid">
                 <h2>Video Podcasts</h2>
 
-                <ul className="grid-col-3 podcastsItems">
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={40}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1
+                        },
+                        768: {
+                            slidesPerView: 2
+                        },
+                        1024: {
+                            slidesPerView: 3
+                        },
+                    }}
+                    className="mySwiper"
+                >
+
+
                     {podcasts.map((item, index) => {
                         if (item.mediaType === "video") {
-                            return <PodcastsItem
-                                key={index}
-                                i={index}
-                                thumbnail={item.thumbImage}
-                                title={item.title}
-                                paragraph={item.paragraph}
-                            />
+                            return <SwiperSlide key={index} className="flex-direction">
+                                <PodcastsItem
+                                    key={index}
+                                    i={index}
+                                    thumbnail={item.thumbImage}
+                                    title={item.title}
+                                    paragraph={item.paragraph}
+                                />
+                            </SwiperSlide>
                         }
                     }
                     )}
-                </ul>
+
+                </Swiper>
 
             </Container>
 
-            <Container classes="noTopPadding">
+            <Container classes="noTopPadding container__noGrid">
                 <h2>Audio Podcasts</h2>
 
-                <ul className="grid-col-3 podcastsItems ">
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={40}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1
+                        },
+                        768: {
+                            slidesPerView: 2
+                        },
+                        1024: {
+                            slidesPerView: 3
+                        },
+                    }}
+                    className="mySwiper"
+                >
+
+
                     {podcasts.map((item, index) => {
                         if (item.mediaType === "audio") {
-                            return <PodcastsItem
-                                key={index}
-                                i={index}
-                                thumbnail={item.thumbImage}
-                                title={item.title}
-                                paragraph={item.paragraph}
-                            />
+                            return <SwiperSlide key={index} className="flex-direction">
+                                <PodcastsItem
+                                    key={index}
+                                    i={index}
+                                    thumbnail={item.thumbImage}
+                                    title={item.title}
+                                    paragraph={item.paragraph}
+                                />
+                            </SwiperSlide>
                         }
                     }
                     )}
-                </ul>
+
+                </Swiper>
             </Container>
 
 
