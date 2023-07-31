@@ -31,11 +31,11 @@
 
             @media only screen and (max-width: $bp-small) {
                 li {
-                    padding-left: 1.1rem;
-                    padding-right: 1.1rem;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
 
                     a {
-                        font-size: 1.3rem;
+                        font-size: 1.2rem;
                     }
 
                     &.contact-btn {
@@ -85,7 +85,7 @@
 
         .container {
             padding-top: 4rem !important;
-            padding-bottom: 2rem !important;
+            padding-bottom: 3rem !important;
         }
 
 
@@ -93,7 +93,7 @@
 
             .logo {
                 width: 6rem;
-                margin-bottom: 4rem;
+                margin-bottom: 2rem;
             }
 
 
