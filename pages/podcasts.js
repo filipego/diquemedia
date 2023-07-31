@@ -66,10 +66,10 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
                     slidesPerView={3}
                     spaceBetween={40}
                     breakpoints={{
-                        640: {
+                        0: {
                             slidesPerView: 1
                         },
-                        768: {
+                        500: {
                             slidesPerView: 2
                         },
                         1024: {
@@ -105,10 +105,10 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
                     slidesPerView={3}
                     spaceBetween={40}
                     breakpoints={{
-                        640: {
+                        0: {
                             slidesPerView: 1
                         },
-                        768: {
+                        500: {
                             slidesPerView: 2
                         },
                         1024: {
@@ -145,10 +145,10 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
                     slidesPerView={3}
                     spaceBetween={40}
                     breakpoints={{
-                        640: {
+                        0: {
                             slidesPerView: 1
                         },
-                        768: {
+                        500: {
                             slidesPerView: 2
                         },
                         1024: {
