@@ -31,16 +31,16 @@
 
             @media only screen and (max-width: $bp-small) {
                 li {
-                    padding-left: 1rem;
-                    padding-right: 1rem;
+                    padding-left: 1.1rem;
+                    padding-right: 1.1rem;
 
                     a {
-                        font-size: 1.1rem;
+                        font-size: 1.3rem;
                     }
 
                     &.contact-btn {
                         a {
-                            padding: .5rem 1.5rem;
+                            padding: .6rem 1.7rem;
 
                         }
                     }
@@ -93,7 +93,7 @@
 
             .logo {
                 width: 6rem;
-                margin-bottom: 2rem;
+                margin-bottom: 4rem;
             }
 
 
@@ -102,11 +102,11 @@
 
                 ul {
                     li {
-                        padding-left: 1.1rem;
-                        padding-right: 1.1rem;
+                        padding-left: 1.2rem;
+                        padding-right: 1.2rem;
 
                         a {
-                            font-size: 1.1rem;
+                            font-size: 1.3rem;
                         }
 
                     }
@@ -129,7 +129,7 @@
             }
 
             p {
-                font-size: .8rem;
+                font-size: .9rem;
             }
         }
 
