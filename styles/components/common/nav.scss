@@ -28,6 +28,25 @@
                     }
                 }
             }
+
+            @media only screen and (max-width: $bp-small) {
+                li {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+
+                    a {
+                        font-size: 1.1rem;
+                    }
+
+                    &.contact-btn {
+                        a {
+                            padding: .5rem 1.5rem;
+
+                        }
+                    }
+                }
+
+            }
         }
     }
 }
@@ -37,11 +56,8 @@
 
         text-align: center;
 
-
         ul {
             display: block;
-
-
 
             li {
                 display: inline-block;
@@ -63,5 +79,59 @@
 
             }
         }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+
+        .container {
+            padding-top: 4rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+
+        .footer__header {
+
+            .logo {
+                width: 6rem;
+                margin-bottom: 2rem;
+            }
+
+
+            nav {
+                margin-bottom: 2.5rem;
+
+                ul {
+                    li {
+                        padding-left: 1.1rem;
+                        padding-right: 1.1rem;
+
+                        a {
+                            font-size: 1.1rem;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .footer__bottom {
+            padding-top: 2.5rem;
+            flex-direction: column-reverse;
+
+            .social {
+                margin-bottom: 3rem;
+
+                ul {
+                    li {
+                        padding-right: 1.5rem;
+                    }
+                }
+            }
+
+            p {
+                font-size: .8rem;
+            }
+        }
+
     }
 }

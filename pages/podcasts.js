@@ -176,8 +176,6 @@ function Podcasts({ title, text, thumbImage, podcasts }) {
 
                 </Swiper>
             </Container>
-
-
         </>
     )
 }
