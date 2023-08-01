@@ -3,6 +3,22 @@
 @import "./typography.scss";
 @import "./swiper.css";
 
+// React-Toastify
+
+:root {
+
+  --toastify-color-success: #C470C3 !important;
+
+  --toastify-font-family: 'Arvo', serif !important;
+
+}
+
+.Toastify .Toastify__progress-bar--success {
+  color: #C470C3 !important;
+}
+
+
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -216,6 +232,8 @@ iframe {
 .remove-cta {
   display: none
 }
+
+
 
 
 // Pages
