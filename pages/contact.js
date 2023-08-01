@@ -16,7 +16,7 @@ function Contact({ }) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_h2wft66', 'template_7pquv6n', form.current, '54HvWBDIv_jfYpjoD')
+        emailjs.sendForm('service_wgxj9on', 'template_2kmjktg', form.current, 'xa7JSLIMA0s6IIUCq')
             .then((result) => {
                 // console.log(result.text);
 
@@ -109,7 +109,7 @@ function Contact({ }) {
                         </div>
                         <div>
                             <label for="help">What can we help you with?</label>
-                            <input className='input' id="help" type="text" name="name" required />
+                            <input className='input' id="help" type="text" name="help" required />
                         </div>
                         <div>
                             <label for="message">Message</label>
