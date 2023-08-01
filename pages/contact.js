@@ -121,7 +121,7 @@ function Contact({ }) {
                         </div>
                         <div>
                             <label for="help">What can we help you with?</label>
-                            <input className='input' id="help" type="text" name="help" required />
+                            <input className='input' id="help" type="text" name="help" />
                         </div>
                         <div>
                             <label for="message">Message</label>

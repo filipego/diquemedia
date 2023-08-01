@@ -9,6 +9,7 @@
 
     h2 {
         font-size: 8rem;
+
     }
 
     &__btn {
@@ -39,7 +40,27 @@
         }
     }
 
+    @media only screen and (max-width: $bp-small) {
+        max-width: 85%;
 
+        h2 {
+            font-size: 5.5rem;
+            line-height: 1.1;
+        }
+
+        &__btn {
+            width: 12rem;
+            height: 12rem;
+            bottom: -5rem;
+            right: 0rem;
+
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+    }
 
 
 
