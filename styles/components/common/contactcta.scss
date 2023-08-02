@@ -41,6 +41,7 @@
     }
 
     @media only screen and (max-width: $bp-small) {
+        margin-bottom: 12rem;
         max-width: 95%;
 
         h2 {
@@ -51,7 +52,7 @@
         &__btn {
             width: 12rem;
             height: 12rem;
-            bottom: -8rem;
+            bottom: -12rem;
             right: 0rem;
 
         }
@@ -63,7 +64,7 @@
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        margin-bottom: 10rem;
+        margin-bottom: 12rem;
         max-width: 98%;
 
         h2 {
@@ -71,7 +72,7 @@
         }
 
         &__btn {
-            bottom: -10rem;
+            bottom: -12rem;
             right: 0rem;
 
         }
