@@ -50,6 +50,10 @@ h2 {
             font-size: 10rem;
         }
 
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 8rem;
+        }
+
 
         .break {
             display: block;
